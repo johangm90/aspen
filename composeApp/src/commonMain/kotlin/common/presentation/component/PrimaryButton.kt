@@ -1,4 +1,4 @@
-package common
+package common.presentation.component
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding

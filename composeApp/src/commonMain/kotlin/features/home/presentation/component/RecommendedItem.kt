@@ -1,4 +1,4 @@
-package features.home.presentation.components
+package features.home.presentation.component
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -30,7 +30,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import common.BadgeBox
+import common.presentation.component.BadgeBox
 import features.home.domain.RecommendedModel
 
 @Composable

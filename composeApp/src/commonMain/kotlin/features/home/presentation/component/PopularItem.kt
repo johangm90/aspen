@@ -1,4 +1,4 @@
-package features.home.presentation.components
+package features.home.presentation.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -24,11 +24,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import common.BadgeBox
-import common.ButtonSize
-import common.LikeButton
+import common.presentation.component.BadgeBox
+import common.presentation.component.ButtonSize
+import common.presentation.component.LikeButton
 import features.home.domain.PopularModel
-import features.location.presentation.components.Rating
+import features.location.presentation.component.Rating
 
 @Composable
 fun PopularItem(

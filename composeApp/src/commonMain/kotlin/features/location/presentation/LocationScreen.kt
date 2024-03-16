@@ -1,14 +1,9 @@
 package features.location.presentation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
@@ -27,24 +22,11 @@ data class LocationScreen(
             viewModel.loadLocation(locationId)
         }
 
-        if (state.isLoading) {
-            Text("Loading...")
-        }
-        if (state.error.isNotEmpty()) {
-            Text("Error: ${state.error}")
-        }
-
-        state.location?.let {
-            Scaffold { paddingValues ->
-                Box(
-                    modifier = Modifier.padding(paddingValues)
-                ) {
-                    LocationContent(
-                        location = it,
-                        onBack = { navigator.pop() }
-                    )
-                }
-            }
+        state.location?.let { location ->
+            LocationContent(
+                location = location,
+                onBack = { navigator.pop() }
+            )
         }
     }
 }

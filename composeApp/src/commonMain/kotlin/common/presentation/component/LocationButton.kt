@@ -1,4 +1,4 @@
-package common
+package common.presentation.component
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
