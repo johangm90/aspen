@@ -1,0 +1,34 @@
+CREATE TABLE locationEntity (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    description TEXT NOT NULL,
+    image_url TEXT NOT NULL,
+    rating REAL NOT NULL,
+    review_count INTEGER NOT NULL,
+    price INTEGER NOT NULL,
+    facilities TEXT NOT NULL,
+    is_popular INTEGER NOT NULL,
+    has_deal INTEGER NOT NULL,
+    is_favorite INTEGER NOT NULL,
+    duration TEXT NOT NULL
+);
+
+CREATE INDEX location_name_index ON locationEntity (name);
+
+getAll:
+SELECT * FROM locationEntity;
+
+getById:
+SELECT * FROM locationEntity WHERE id = ?;
+
+insert:
+INSERT INTO locationEntity (name, description, image_url, rating, review_count, price, facilities, is_popular, has_deal, is_favorite, duration) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+update:
+UPDATE locationEntity SET name = ?, description = ?, image_url = ?, rating = ?, review_count = ?, price = ?, facilities = ? , is_popular = ?, has_deal = ?, is_favorite = ?, duration = ? WHERE id = ?;
+
+delete:
+DELETE FROM locationEntity WHERE id = ?;
+
+clear:
+DELETE FROM locationEntity;
